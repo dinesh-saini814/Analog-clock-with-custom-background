@@ -114,10 +114,91 @@ body {
 
 .clock .hand {
   position: absolute;
-  bottom: 50%;
-  left: 50%;
-  transform-origin: bottom;
   width: 5px;
-  height: 20%;
+  height: 6;
   background-color: #fff;
+  transform-origin: 100%;
+  transform: rotate(90deg);
+  animation: rotate 60s linear infinite;
+}
+
+.clock .hand::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  border-radius: 50%;
+  top: -2px;
+  right: -4px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.clock .hand.hour {
+  width: 30%;
+  height: 10px;
+  background-color: #fff;
+  transform-origin: 100%;
+  transform: rotate(90deg);
+  animation: rotate 60s linear infinite;
+}
+
+.clock .hand.hour::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  border-radius: 50%;
+  top: -2px;
+  right: -4px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.clock .hand.minute {
+  width: 40%;
+  height: 6px;
+  background-color: #fff;
+  transform-origin: 100%;
+  transform: rotate(90deg);
+  animation: rotate 60s linear infinite;
+}
+
+.clock .hand.minute::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  border-radius: 50%;
+  top: -2px;
+  right: -4px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.clock .hand.second {
+  width: 50%;
+  height: 2px;
+  background-color: #fff;
+  transform-origin: 100%;
+  transform: rotate(90deg);
+  animation: rotate 60s linear infinite;
+}
+
+.clock .hand.second::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  border-radius: 50%;
+  top: -2px;
+  right: -4px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(450deg);
+  }
 }
