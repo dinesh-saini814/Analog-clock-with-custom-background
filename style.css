@@ -13,7 +13,7 @@ body {
   align-items: center;
 }
 
-.container {
+.clock {
   position: relative;
   width: 300px;
   height: 300px;
@@ -28,105 +28,86 @@ body {
     inset -1px -1px 10px rgba(0, 0, 0, 0.2);
 }
 
-.clock {
+.clock .numbers {
+  position: absolute;
   width: 250px;
   height: 250px;
-  background: #83a1bb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background: #83a1bb; */
   background: #152b4a linear-gradient(111deg, #3969ac, #91add4);
   border-radius: 50%;
   box-shadow: 5px 5px 15px #152b4a66,
     inset 5px 5px 5px rgba(255, 255, 255, 0.55),
-    -6px -6px 10px rgba(255, 255, 255, 1);
+    -6px -6px 10px rgba(255, 255, 255, 0.8);
 }
 
-.clock .number {
-  --deg: 0;
-  inset: 35px;
+.clock .numbers span {
   position: absolute;
-  font-size: 20px;
-  font-weight: 500;
-  display: flex;
-  justify-content: center;
+  inset: 5px;
+  text-align: center;
   color: #fff;
-  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  transform: rotate(var(--deg));
+  font-size: 1.2em;
+  transform: rotate(calc(30deg * var(--i)));
 }
 
-.clock .hand {
-  display: flex;
-  position: absolute;
-  width: 3px;
-  height: 90px;
-  color: black;
-  /* position: relative; */
-  animation: rotate 20s linear infinite;
-  transform-origin: bottom;
-  top: 20%;
-  left: 50%;
-  background: #ff4747;
+.clock .numbers span b {
+  font-weight: 600;
+  display: inline-block;
+  transform: rotate(calc(-30deg * var(--i)));
 }
-
-.clock .hand::before {
+.clock .numbers::before {
   content: "";
   position: absolute;
-  width: 10px;
-  height: 10px;
+  inset: 35px;
+  background: linear-gradient(#ffffff, #ff6598, #41ffff, #fff67b, #ff99fa);
   border-radius: 50%;
-  background: #ff4747;
-  top: 80px;
-  left: -4px;
+  animation: animate 30s linear infinite;
 }
-
-.clock .number1 {
-  --deg: 30deg;
-}
-
-.clock .number2 {
-  --deg: 60deg;
-}
-
-.clock .number3 {
-  --deg: 90deg;
-}
-
-.clock .number4 {
-  --deg: 120deg;
-}
-
-.clock .number5 {
-  --deg: 150deg;
-}
-
-.clock .number6 {
-  --deg: 180deg;
-}
-
-.clock .number7 {
-  --deg: 210deg;
-}
-
-.clock .number8 {
-  --deg: 240deg;
-}
-
-.clock .number9 {
-  --deg: 270deg;
-}
-
-.clock .number10 {
-  --deg: 300deg;
-}
-
-.clock .number11 {
-  --deg: 330deg;
-}
-
-.clock .number12 {
-  --deg: 360deg;
-}
-
-@keyframes rotate {
-  100% {
+@keyframes animate {
+  0% {
     transform: rotate(360deg);
   }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.clock .numbers::after {
+  content: "";
+  position: absolute;
+  inset: 40px;
+  background: #152b4a;
+  border-radius: 50%;
+}
+.clock .numbers .circle {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+.clock .numbers .circle i {
+  position: absolute;
+  width: 3px;
+  height: 50%;
+  background: #fff;
+  transform-origin: bottom;
+  transform: skewY(0.55);
+}
+
+.clock .numbers .circle#hr i {
+  transform: skewY(0.3);
+}
+.clock .numbers .circle#min i {
+  height: 40%;
+  transform: skewY(0.3);
+}
+
+.clock .numbers .circle#sec i {
+  height: 30%;
+  transform: skewY(0.3);
 }
