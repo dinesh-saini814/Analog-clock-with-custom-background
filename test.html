@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Analog Clock</title>
+    <style>
+      .clock {
+        width: 200px;
+        height: 200px;
+        border: 2px solid #000;
+        border-radius: 50%;
+        position: relative;
+        margin: 0 auto;
+        transform: rotate(0deg);
+      }
+
+      .hour-hand,
+      .minute-hand,
+      .second-hand {
+        background-color: #000;
+        position: absolute;
+        transform-origin: bottom center;
+      }
+
+      .hour-hand {
+        width: 6px;
+        height: 60px;
+        top: 70px;
+        left: 97px;
+        transform: rotate(30deg);
+      }
+
+      .minute-hand {
+        width: 4px;
+        height: 80px;
+        top: 60px;
+        left: 98px;
+        transform: rotate(180deg);
+      }
+
+      .second-hand {
+        width: 2px;
+        height: 90px;
+        top: 50px;
+        left: 99px;
+        transform: rotate(270deg);
+      }
+
+      .number {
+        position: absolute;
+        font-size: 12px;
+        font-weight: bold;
+        transform-origin: center center;
+      }
+
+      .number-1 {
+        top: 20px;
+        left: 150px;
+      }
+
+      .number-2 {
+        top: 50px;
+        left: 180px;
+      }
+
+      .number-3 {
+        top: 100px;
+        left: 190px;
+      }
+
+      .number-4 {
+        top: 150px;
+        left: 170px;
+      }
+
+      .number-5 {
+        top: 178px;
+        left: 135px;
+      }
+
+      .number-6 {
+        top: 185px;
+        left: 100px;
+      }
+
+      .number-7 {
+        top: 175px;
+        left: 60px;
+      }
+
+      .number-8 {
+        top: 150px;
+        left: 30px;
+      }
+
+      .number-9 {
+        top: 100px;
+        left: 10px;
+      }
+
+      .number-10 {
+        top: 50px;
+        left: 20px;
+      }
+
+      .number-11 {
+        top: 20px;
+        left: 50px;
+      }
+
+      .number-12 {
+        top: 10px;
+        left: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="clock">
+      <div class="hour-hand"></div>
+      <div class="minute-hand"></div>
+      <div class="second-hand"></div>
+      <div class="number number-1">1</div>
+      <div class="number number-2">2</div>
+      <div class="number number-3">3</div>
+      <div class="number number-4">4</div>
+      <div class="number number-5">5</div>
+      <div class="number number-6">6</div>
+      <div class="number number-7">7</div>
+      <div class="number number-8">8</div>
+      <div class="number number-9">9</div>
+      <div class="number number-10">10</div>
+      <div class="number number-11">11</div>
+      <div class="number number-12">12</div>
+    </div>
+  </body>
+</html>
