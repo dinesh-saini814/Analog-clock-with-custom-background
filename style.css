@@ -39,22 +39,10 @@ body {
     -6px -6px 10px rgba(255, 255, 255, 1);
 }
 
-/* .clock .number {
-  position: absolute;
-
-  text-align: center;
-  color: #fff;
-  display: flex;
-  justify-content: center;
-  background-color: #83a1bb;
-  transform: rotate(calc(30deg * var(--i)));
-}  */
-
 .clock .number {
   --deg: 0;
   inset: 35px;
   position: absolute;
-  /* background-color: aqua; */
   font-size: 20px;
   font-weight: 500;
   display: flex;
@@ -62,6 +50,31 @@ body {
   color: #fff;
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   transform: rotate(var(--deg));
+}
+
+.clock .hand {
+  display: flex;
+  position: absolute;
+  width: 3px;
+  height: 90px;
+  color: black;
+  /* position: relative; */
+  animation: rotate 20s linear infinite;
+  transform-origin: bottom;
+  top: 20%;
+  left: 50%;
+  background: #ff4747;
+}
+
+.clock .hand::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #ff4747;
+  top: 80px;
+  left: -4px;
 }
 
 .clock .number1 {
@@ -112,93 +125,8 @@ body {
   --deg: 360deg;
 }
 
-.clock .hand {
-  position: absolute;
-  width: 5px;
-  height: 6;
-  background-color: #fff;
-  transform-origin: 100%;
-  transform: rotate(90deg);
-  animation: rotate 60s linear infinite;
-}
-
-.clock .hand::before {
-  content: "";
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  background-color: #fff;
-  border-radius: 50%;
-  top: -2px;
-  right: -4px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-}
-
-.clock .hand.hour {
-  width: 30%;
-  height: 10px;
-  background-color: #fff;
-  transform-origin: 100%;
-  transform: rotate(90deg);
-  animation: rotate 60s linear infinite;
-}
-
-.clock .hand.hour::before {
-  content: "";
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  background-color: #fff;
-  border-radius: 50%;
-  top: -2px;
-  right: -4px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-}
-
-.clock .hand.minute {
-  width: 40%;
-  height: 6px;
-  background-color: #fff;
-  transform-origin: 100%;
-  transform: rotate(90deg);
-  animation: rotate 60s linear infinite;
-}
-
-.clock .hand.minute::before {
-  content: "";
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  background-color: #fff;
-  border-radius: 50%;
-  top: -2px;
-  right: -4px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-}
-
-.clock .hand.second {
-  width: 50%;
-  height: 2px;
-  background-color: #fff;
-  transform-origin: 100%;
-  transform: rotate(90deg);
-  animation: rotate 60s linear infinite;
-}
-
-.clock .hand.second::before {
-  content: "";
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  background-color: #fff;
-  border-radius: 50%;
-  top: -2px;
-  right: -4px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-}
-
 @keyframes rotate {
   100% {
-    transform: rotate(450deg);
+    transform: rotate(360deg);
   }
 }
