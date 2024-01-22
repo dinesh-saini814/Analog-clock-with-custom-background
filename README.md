@@ -32,6 +32,6 @@ This project is licensed under the [MIT License](LICENSE).
 
 Here are some screenshots of the analog clock project:
 
-![Analog Clock Screenshot 1](/path/to/screenshot1.png)
-![Analog Clock Screenshot 2](/path/to/screenshot2.png)
-![Analog Clock Screenshot 3](/path/to/screenshot3.png)
+![Analog Clock Screenshot 1](/assets/preview1.png)
+![Analog Clock Screenshot 2](/assets/preview2.png)
+![Analog Clock Screenshot 3](/assets/preview3.png)
