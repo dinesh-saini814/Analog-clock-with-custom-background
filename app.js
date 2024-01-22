@@ -38,19 +38,8 @@ colorBoxes.forEach(function (box) {
       number.style.background = color;
       buttonUpload.style.background = color;
     });
-    // buttonUpload.forEach(function (button) {
-    //   button.style.background = color;
-    // });
   });
 });
-
-// button image change
-// button.addEventListener("click", () => {
-//   clock.style.background = "url(/wp2560300.jpg)";
-//   clock.style.backgroundSize = "cover";
-//   clock.style.backgroundPosition = "center";
-//   clock.style.backgroundRepeat = "no-repeat";
-// });
 
 function previewImage(event) {
   const input = event.target;

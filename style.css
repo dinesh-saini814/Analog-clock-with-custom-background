@@ -72,31 +72,7 @@ body {
   display: inline-block;
   transform: rotate(calc(-30deg * var(--i)));
 }
-/* .clock .numbers::before {
-  content: "";
-  position: absolute;
-  inset: 35px;
-  background: linear-gradient(#ffffff, #ff6598, #41ffff, #fff67b, #ff99fa);
-  background-size: cover;
-  border-radius: 50%;
-  animation: animate 30s linear infinite;
-} */
-@keyframes animate {
-  0% {
-    transform: rotate(360deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
-}
 
-/* .clock .numbers::after {
-  content: "";
-  position: absolute;
-  inset: 38px;
-  background: #152b4a;
-  border-radius: 50%;
-} */
 .clock .numbers .circle {
   position: absolute;
   inset: 0;
@@ -104,8 +80,6 @@ body {
   display: flex;
   justify-content: center;
   z-index: 10;
-  /* background-color: #ff99fa; best background */
-  /* background-color: #fff67b; */
 }
 .clock .numbers .circle i {
   position: absolute;
@@ -139,7 +113,6 @@ body {
   height: 40px;
   flex-direction: row;
   justify-content: center;
-  /* margin-bottom: 5px; */
   position: relative;
   top: 3%;
   margin-top: 5px;
@@ -159,19 +132,6 @@ body {
   transform: scale(1.1);
 }
 
-/* input {
-
-  height: 40px;
-
-  border: none;
-  background-color: #e91e63;
-
-  cursor: pointer;
-  margin-top: 10px;
-
-
-  color: #fff;
-} */
 .custom-file-upload {
   padding: 10px;
   width: 100%;
