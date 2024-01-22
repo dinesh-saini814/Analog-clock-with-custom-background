@@ -17,7 +17,7 @@ body {
   justify-content: center;
   width: 100%;
   max-width: 300px;
-  height: 400px;
+  height: 450px;
   align-items: center;
   flex-direction: column;
   background: #c9d5e0;
@@ -51,6 +51,7 @@ body {
   position: absolute;
   inset: 35px;
   background: linear-gradient(111deg, #f0ff6a, #ff8d8d);
+
   border-radius: 50%;
   box-shadow: 5px 5px 15px #152b4a66,
     inset 5px 5px 5px rgba(255, 255, 255, 0.55),
@@ -71,15 +72,15 @@ body {
   display: inline-block;
   transform: rotate(calc(-30deg * var(--i)));
 }
-.clock .numbers::before {
+/* .clock .numbers::before {
   content: "";
   position: absolute;
   inset: 35px;
-  /* background: linear-gradient(#ffffff, #ff6598, #41ffff, #fff67b, #ff99fa); */
-  background: url();
+  background: linear-gradient(#ffffff, #ff6598, #41ffff, #fff67b, #ff99fa);
+  background-size: cover;
   border-radius: 50%;
   animation: animate 30s linear infinite;
-}
+} */
 @keyframes animate {
   0% {
     transform: rotate(360deg);
@@ -138,17 +139,17 @@ body {
   height: 40px;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
-  margin-bottom: 5px;
-  margin-top: 8px;
+  /* margin-bottom: 5px; */
+  position: relative;
+  top: 3%;
+  margin-top: 5px;
   flex-wrap: wrap;
-  justify-content: center;
 }
 .color-box {
   width: 25px;
   height: 25px;
-  margin: 1px;
-  border-radius: 5px;
+  margin: 3px;
+  border-radius: 50%;
   cursor: pointer;
   border: 1px solid rgb(255, 255, 255);
 }
@@ -156,4 +157,40 @@ body {
 .color-box:hover {
   box-shadow: 0 0 2px rgb(71, 71, 71);
   transform: scale(1.1);
+}
+
+/* input {
+
+  height: 40px;
+
+  border: none;
+  background-color: #e91e63;
+
+  cursor: pointer;
+  margin-top: 10px;
+
+
+  color: #fff;
+} */
+.custom-file-upload {
+  padding: 10px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 40px;
+  display: inline-block;
+  cursor: pointer;
+  background: #f2f2f2;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  color: #333;
+  font-size: 1.2em;
+  font-weight: 600;
+  text-align: center;
+}
+
+.custom-file-upload:hover {
+  background: #e8e8e8;
+}
+
+.custom-file-upload i {
+  margin-right: 5px;
 }

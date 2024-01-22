@@ -4,10 +4,58 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+      integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+      crossorigin="anonymous"
+    />
     <title>Analog clock</title>
   </head>
   <body>
     <div class="container">
+      <div class="collor_pallate">
+        <div
+          class="color-box"
+          data-color="#f0e584"
+          style="background-color: #f0e584"
+        ></div>
+        <div
+          class="color-box"
+          data-color="#ff9e9e"
+          style="background-color: #ff9e9e"
+        ></div>
+        <div
+          class="color-box"
+          data-color="#aafa95"
+          style="background-color: #aafa95"
+        ></div>
+        <div
+          class="color-box"
+          data-color="#a0d1cb"
+          style="background-color: #a0d1cb"
+        ></div>
+        <div
+          class="color-box"
+          data-color="#1c3a63"
+          style="background-color: #1c3a63"
+        ></div>
+        <div
+          class="color-box"
+          data-color="#3dac94"
+          style="background-color: #3dac94"
+        ></div>
+        <div
+          class="color-box"
+          data-color="linear-gradient(111deg, #f0ff6a, #ff8d8d)"
+          style="background-color: linear-gradient(111deg, #f0ff6a, #ff8d8d)"
+        ></div>
+        <div
+          class="color-box"
+          data-color="#e088dc"
+          style="background-color: #e088dc"
+        ></div>
+      </div>
       <div class="clock">
         <div class="numbers">
           <span style="--i: 0"><b>12</b></span>
@@ -27,51 +75,12 @@
           <div class="circle" id="sc"><i></i></div>
         </div>
       </div>
-      <div class="addition">
-        <!-- <button>Click me</button> -->
-        <div class="collor_pallate">
-          <div
-            class="color-box"
-            data-color="#f0e584"
-            style="background-color: #f0e584"
-          ></div>
-          <div
-            class="color-box"
-            data-color="#ff9e9e"
-            style="background-color: #ff9e9e"
-          ></div>
-          <div
-            class="color-box"
-            data-color="#aafa95"
-            style="background-color: #aafa95"
-          ></div>
-          <div
-            class="color-box"
-            data-color="#a0d1cb"
-            style="background-color: #a0d1cb"
-          ></div>
-          <div
-            class="color-box"
-            data-color="#1c3a63"
-            style="background-color: #1c3a63"
-          ></div>
-          <div
-            class="color-box"
-            data-color="#3dac94"
-            style="background-color: #3dac94"
-          ></div>
-          <div
-            class="color-box"
-            data-color="linear-gradient(111deg, #f0ff6a, #ff8d8d)"
-            style="background-color: linear-gradient(111deg, #f0ff6a, #ff8d8d)"
-          ></div>
-          <div
-            class="color-box"
-            data-color="#e088dc"
-            style="background-color: #e088dc"
-          ></div>
-        </div>
-      </div>
+      <!-- <button class="fas fa-cloud-upload-alt icon">Upload here</button> -->
+      <div class="upload">
+        <label for="file" class="custom-file-upload">
+          <i class="fa fa-cloud-upload-alt icon"></i> Upload here
+        </label>
+        <input type="file" id="file" style="display: none;" />
     </div>
 
     <script src="app.js"></script>

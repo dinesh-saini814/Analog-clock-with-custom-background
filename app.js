@@ -8,9 +8,7 @@ var sheet = document.styleSheets[0];
 var colorBoxes = document.querySelectorAll(".color-box");
 
 let button = document.querySelector("button");
-let background = document.querySelector(".container");
 let clock = document.querySelector(".numbers");
-let clock1 = document.querySelector(".numbers::after");
 
 setInterval(() => {
   let day = new Date();
@@ -23,12 +21,8 @@ setInterval(() => {
   sec.style.transform = `rotateZ(${s}deg)`;
 });
 
-// button.addEventListener("click", () => {
-//   clock.style.background = "linear-gradient(111deg, #d6cf60, #ff9999)";
-// });
+// Get the background color of the clicked box
 
-// Get all divs with class 'colour-box'
-// Get all color boxes
 var colorBoxes = document.querySelectorAll(".color-box");
 
 // Add a click event listener to each color box
@@ -47,11 +41,10 @@ colorBoxes.forEach(function (box) {
   });
 });
 
-sheet.insertRule(
-  `
-	.clock .numbers::before{
-    background: #ff0000;
-  }
-`,
-  sheet.cssRules.length
-);
+// button image change
+// button.addEventListener("click", () => {
+//   clock.style.background = "url(/wp2560300.jpg)";
+//   clock.style.backgroundSize = "cover";
+//   clock.style.backgroundPosition = "center";
+//   clock.style.backgroundRepeat = "no-repeat";
+// });
