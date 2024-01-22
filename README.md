@@ -24,10 +24,6 @@ To get started with the analog clock project, follow these steps:
 
 Contributions are welcome! If you have any ideas or improvements for the analog clock project, feel free to submit a pull request.
 
-## License
-
-This project is licensed under the [MIT License](LICENSE).
-
 ## Images
 
 Here are some screenshots of the analog clock project:
