@@ -51,3 +51,20 @@ colorBoxes.forEach(function (box) {
 //   clock.style.backgroundPosition = "center";
 //   clock.style.backgroundRepeat = "no-repeat";
 // });
+
+function previewImage(event) {
+  const input = event.target;
+  if (input.files && input.files[0]) {
+    const reader = new FileReader();
+
+    reader.onload = function (e) {
+      const clock = document.querySelector(".numbers ");
+      clock.style.background = `url('${e.target.result}')`;
+      clock.style.backgroundSize = "cover";
+      clock.style.backgroundPosition = "center";
+      clock.style.backgroundRepeat = "no-repeat";
+    };
+
+    reader.readAsDataURL(input.files[0]);
+  }
+}
