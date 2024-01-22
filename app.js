@@ -8,7 +8,8 @@ var sheet = document.styleSheets[0];
 var colorBoxes = document.querySelectorAll(".color-box");
 
 let button = document.querySelector("button");
-let clock = document.querySelector(".numbers");
+var numbers = document.querySelectorAll(".numbers");
+let buttonUpload = document.querySelector(".custom-file-upload");
 
 setInterval(() => {
   let day = new Date();
@@ -30,14 +31,16 @@ colorBoxes.forEach(function (box) {
   box.addEventListener("click", function () {
     // Get the background color of the clicked box
     var color = this.style.backgroundColor;
-
     // Get all elements with the .numbers class
-    var numbers = document.querySelectorAll(".numbers");
 
     // Change the background color of each .numbers element
     numbers.forEach(function (number) {
       number.style.background = color;
+      buttonUpload.style.background = color;
     });
+    // buttonUpload.forEach(function (button) {
+    //   button.style.background = color;
+    // });
   });
 });
 

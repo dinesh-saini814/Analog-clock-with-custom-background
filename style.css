@@ -179,7 +179,7 @@ body {
   border-radius: 40px;
   display: inline-block;
   cursor: pointer;
-  background: #f2f2f2;
+  background: #ffe1b3;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
   color: #333;
   font-size: 1.2em;
@@ -188,7 +188,7 @@ body {
 }
 
 .custom-file-upload:hover {
-  background: #e8e8e8;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
 }
 
 .custom-file-upload i {
