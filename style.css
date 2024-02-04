@@ -1,29 +1,11 @@
-/* :root {
+:root {
   --primary-color: #f3f3f3;
   --secondary-color: #dddddd;
-  --ternary-color: #414141;
+  --ternary-color: #fcfcfc;
   --clock-primary-colour: #d4a3c4;
   --background-color: #ddddddd5;
   --second-niddle-color: #ff0000;
   --niddle-color: #ffffff;
-  --text-color: #e0e0e0;
-  --boxColor-color: #2b2b2b;
-  --octonary-color: #494949;
-  --nonary-color: #cacaca;
-  --denary-color: #2b2b2b;
-  --quinary-color: #f3f3f3;
-} */
-
-:root {
-  --primary-color: #171717;
-  --secondary-color: #222222;
-  --ternary-color: #ffffff;
-  --clock-primary-colour: #d4a3c4;
-  --background-color: #ddddddd5;
-  --second-niddle-color: #ff0000;
-  --niddle-color: #ffffff;
-
-  /* //vhbhvb */
   --text-color: #e0e0e0;
   --boxColor-color: #2b2b2b;
   --octonary-color: #494949;
@@ -56,15 +38,10 @@ body {
   flex-direction: column;
   background: var(--secondary-color);
   border-radius: 50px;
-  /* box-shadow: 30px 30px 30px -10px rgba(0, 0, 0, 0.15),
-    inset 15px 15px 10px rgba(225, 225, 225, 0.75),
-    -15px -15px 35px rgba(225, 225, 225, 0.55),
-    inset -1px -1px 10px rgba(0, 0, 0, 0.2); */
-  background: #171717;
-  box-shadow: 30px 30px 30px -10px rgba(15, 15, 15, 0.411),
-    inset 15px 15px 10px rgba(53, 53, 53, 0.75),
-    -15px -15px 35px rgba(0, 0, 0, 0.55),
-    inset -1px -1px 10px rgba(145, 145, 145, 0.2);
+  box-shadow: 30px 30px 30px -10px rgba(0, 0, 0, 0.15),
+    inset 15px 15px 10px rgba(175, 175, 175, 0.75),
+    -15px -15px 35px rgba(192, 192, 192, 0.55),
+    inset -1px -1px 10px rgba(0, 0, 0, 0.4);
 }
 .clock {
   display: flex;
@@ -88,24 +65,20 @@ body {
 .clock .numbers {
   position: absolute;
   inset: 35px;
-  /* background: linear-gradient(111deg, #f0ff6a, #ff8d8d); */
   background: var(--clock-primary-colour);
   border-radius: 50%;
-  /* box-shadow: 5px 5px 15px #152b4a66,
-    inset 5px 5px 5px rgba(255, 255, 255, 0.55),
-    -6px -6px 10px rgba(255, 255, 255, 0.8); */
-  box-shadow: 30px 30px 30px -10px rgba(78, 78, 78, 0.411),
-    inset 15px 15px 10px rgba(48, 48, 48, 0.342),
-    -15px -15px 35px rgba(15, 15, 15, 0.384),
-    inset -1px -1px 10px rgb(255, 255, 255);
+
+  box-shadow: 30px 30px 30px -10px rgba(226, 226, 226, 0.411),
+    inset 15px 15px 10px rgba(255, 255, 255, 0.342),
+    -15px -15px 35px rgba(107, 107, 107, 0.384),
+    inset -1px -1px 10px rgb(134, 134, 134);
 }
 
 .clock .numbers span {
   position: absolute;
   inset: 5px;
   text-align: center;
-  /* color: #e9e9e9; */
-  color: #242424;
+  color: var(--ternary-color);
   font-size: 1.25em;
   transform: rotate(calc(30deg * var(--i)));
 }
@@ -184,14 +157,13 @@ body {
   cursor: pointer;
   background: var(--clock-primary-colour);
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-  color: var(--ternary-color);
-  font-size: 1.2em;
+  color: #5c5c5c;
+  font-size: 1em;
   font-weight: 600;
   text-align: center;
 }
 
 .custom-file-upload:hover {
-  /* box-shadow: 0 0 5px rgba(0, 0, 0, 0.4); */
   box-shadow: 0 0 5px rgba(179, 179, 179, 0.4);
 }
 
